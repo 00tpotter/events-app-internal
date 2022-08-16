@@ -75,7 +75,7 @@ describe('POST /event', function () {
     dbStub.returns(Promise.resolve({ events: []}));
     request(app)
       .post('/event')
-      .send({ title: 'a test event', description: 'a really cool test', location: 'Somewhere nice', likes: 0 })
+      .send({ title: 'a tester event', description: 'a really cool test', location: 'Somewhere nice', likes: 0 })
       .set('Accept', 'application/json')
       .expect(200)
       .end((err, res) => {
